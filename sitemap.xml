@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/concepts/best-practices/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/concepts/dockerfile-guide/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/concepts/how-docker-works/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/lab/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/lab/part1/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+    <url>
+         <loc>https://entouanes.github.io/docker-learning-bite/lab/part2/</loc>
+         <lastmod>2026-05-12</lastmod>
+    </url>
+</urlset>
