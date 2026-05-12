@@ -1,0 +1,101 @@
+site_name: Clean Docker Images
+site_url: https://entouanes.github.io/docker-learning-bite/
+site_description: A short self-guided tutorial on writing clean Docker images — layers, Dockerfiles, and multi-stage builds.
+site_author: Entouanes
+copyright: "Copyright &copy; 2026 Entouanes"
+
+repo_url: https://github.com/Entouanes/docker-learning-bite
+repo_name: Entouanes/docker-learning-bite
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+remote_branch: gh-pages
+remote_name: origin
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Concepts:
+      - How Docker Works: concepts/how-docker-works.md
+      - Dockerfile Guide: concepts/dockerfile-guide.md
+      - Best Practices: concepts/best-practices.md
+  - Lab:
+      - Overview: lab/index.md
+      - "Part 1 · Layer Fundamentals": lab/part1.md
+      - "Part 2 · Multi-Stage Builds": lab/part2.md
+
+plugins:
+  - search:
+      lang: en
+  - social:
+      cards_layout_options:
+        background_color: "#1565c0"
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Entouanes
+
+strict: false

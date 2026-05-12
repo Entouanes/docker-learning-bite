@@ -1,0 +1,42 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ hashFiles('uv.lock') }}
+          path: ~/.cache/uv
+          restore-keys: mkdocs-material-
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Deploy to GitHub Pages
+        run: uv run mkdocs gh-deploy --force
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
