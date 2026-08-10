@@ -1,0 +1,14 @@
+name: PR Merge Hello
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  hello-world:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello world
+        run: echo "Hello world"
