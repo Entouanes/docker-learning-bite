@@ -22,7 +22,7 @@ For strong results, include:
 From the pull request page:
 
 1. Open your PR in GitHub
-2. Trigger **Copilot Code Review**
+2. In the **Reviewers** panel, request **Copilot** as a reviewer (or use the PR review action menu and select **Copilot**)
 3. Wait for Copilot to post review comments on changed files
 
 Copilot reviews diff context, flags likely issues, and proposes concrete follow-ups.
