@@ -36,7 +36,7 @@
 
     ---
 
-    A practical checklist to review Docker-focused pull requests with confidence.
+    Learn how to run GitHub Copilot Code Review and combine AI feedback with Docker validation.
 
     [:octicons-arrow-right-24: Code Review](concepts/code-review.md)
 
@@ -67,7 +67,7 @@
 | [How Docker Works](concepts/how-docker-works.md) | Images, layers, containers | ~5 min |
 | [Dockerfile Guide](concepts/dockerfile-guide.md) | Key instructions | ~5 min |
 | [Best Practices](concepts/best-practices.md) | Techniques for clean images | ~5 min |
-| [Code Review](concepts/code-review.md) | PR review checklist and validation flow | ~5 min |
+| [Code Review](concepts/code-review.md) | GitHub Copilot Code Review workflow | ~5 min |
 | [Lab Part 1](lab/part1.md) | Build, measure, fix | ~15 min |
 | [Lab Part 2](lab/part2.md) | Multi-stage builds | ~10 min |
 

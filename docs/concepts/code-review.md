@@ -1,73 +1,75 @@
-# How to Run Code Review
+# How to Use GitHub Copilot Code Review
 
-Code review keeps Docker changes safe, readable, and production-ready before merge.
+GitHub Copilot Code Review helps you catch issues faster by adding AI feedback directly to your pull request flow.
 
 ---
 
 ## 1. Open a focused pull request
 
-Keep each PR small and scoped to one concern (for example: layer ordering, base image hardening, or multi-stage refactor).
+Copilot gives better feedback when your PR is small and scoped to one topic.
 
-Include in the PR description:
+For strong results, include:
 
-- What changed
-- Why it changed
-- How to validate it
-- Risk and rollback notes (if relevant)
-
----
-
-## 2. Review with a checklist
-
-Use a repeatable checklist for every Docker-related change:
-
-- **Correctness:** Does the image still run and expose the expected behavior?
-- **Layer efficiency:** Are stable layers above volatile ones for cache reuse?
-- **Image size:** Were unnecessary packages, files, and build artifacts removed?
-- **Security:** Is the image using a minimal base and non-root user where possible?
-- **Secrets safety:** Are `.env`, keys, and local artifacts excluded by `.dockerignore`?
-- **Reproducibility:** Are base tags and key dependencies pinned where needed?
+- A clear summary of what changed
+- Why the change was needed
+- How reviewers can validate it
+- Any known tradeoffs or risks
 
 ---
 
-## 3. Validate locally before approval
+## 2. Start Copilot Code Review on the PR
 
-Before approving, run quick checks:
+From the pull request page:
 
-1. Build the image
-2. Run the container
-3. Smoke-test the app behavior
-4. Compare image size against the previous version
-5. Confirm no sensitive files are copied into the image
+1. Open your PR in GitHub
+2. Trigger **Copilot Code Review**
+3. Wait for Copilot to post review comments on changed files
 
----
-
-## 4. Give actionable feedback
-
-Prefer specific, testable comments:
-
-- Point to exact Dockerfile lines or build output
-- Explain the impact (speed, size, security, reliability)
-- Suggest the expected outcome after the fix
+Copilot reviews diff context, flags likely issues, and proposes concrete follow-ups.
 
 ---
 
-## 5. Re-review after updates
+## 3. Triage Copilot comments
 
-When the author pushes fixes:
+Treat Copilot output like a fast first-pass reviewer:
 
-- Re-check only changed files first
-- Re-run key validations if Dockerfile or dependencies changed
-- Approve only when both functionality and container quality criteria pass
+- **Accept** comments that point to real defects or risky patterns
+- **Question** comments that lack context
+- **Dismiss** comments that are not applicable to your architecture
+
+Always make the final decision with human judgment.
 
 ---
 
-## Quick approval rubric
+## 4. Apply fixes and re-run review
 
-Approve when all are true:
+After you push updates:
 
-- Build succeeds
-- Runtime behavior is correct
-- No obvious Docker anti-patterns remain
-- No security red flags in the image setup
-- PR description and reasoning are clear
+- Re-run Copilot Code Review on the PR
+- Confirm previous issues are resolved
+- Check for newly introduced concerns in the updated diff
+
+Iterate until comments are either resolved or intentionally dismissed with rationale.
+
+---
+
+## 5. Combine AI review with Docker checks
+
+Copilot should complement, not replace, project checks:
+
+- Build the image
+- Run container smoke tests
+- Verify layer ordering and image size impact
+- Confirm non-root and `.dockerignore` safety expectations
+
+Use Copilot for speed, and validation steps for confidence.
+
+---
+
+## Quick workflow checklist
+
+- PR is focused and well-described
+- Copilot Code Review has run on the latest commit
+- Valid Copilot findings are fixed
+- Remaining Copilot comments are addressed or dismissed with reason
+- Local/CI validation still passes
