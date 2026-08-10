@@ -32,6 +32,14 @@
 
     [:octicons-arrow-right-24: Best Practices](concepts/best-practices.md)
 
+-   :material-account-group-outline: **Code review**
+
+    ---
+
+    A practical checklist to review Docker-focused pull requests with confidence.
+
+    [:octicons-arrow-right-24: Code Review](concepts/code-review.md)
+
 -   :material-flask-outline: **Hands-on lab**
 
     ---
@@ -59,7 +67,8 @@
 | [How Docker Works](concepts/how-docker-works.md) | Images, layers, containers | ~5 min |
 | [Dockerfile Guide](concepts/dockerfile-guide.md) | Key instructions | ~5 min |
 | [Best Practices](concepts/best-practices.md) | Techniques for clean images | ~5 min |
+| [Code Review](concepts/code-review.md) | PR review checklist and validation flow | ~5 min |
 | [Lab Part 1](lab/part1.md) | Build, measure, fix | ~15 min |
 | [Lab Part 2](lab/part2.md) | Multi-stage builds | ~10 min |
 
-**Total: ~40 minutes.** Read the three concept pages first, then do the lab.
+**Total: ~45 minutes.** Read the concept pages first, then do the lab.

@@ -47,6 +47,7 @@ nav:
       - How Docker Works: concepts/how-docker-works.md
       - Dockerfile Guide: concepts/dockerfile-guide.md
       - Best Practices: concepts/best-practices.md
+      - Code Review: concepts/code-review.md
   - Lab:
       - Overview: lab/index.md
       - "Part 1 · Layer Fundamentals": lab/part1.md
